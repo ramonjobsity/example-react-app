@@ -16,21 +16,21 @@ export class ExchangeRates extends React.Component {
           <tbody>
           <tr>
             <td>USD</td>
-            <td>0</td>
+            <td />
             <td>0</td>
             <td>0</td>
           </tr>
           <tr>
             <td>GBP</td>
             <td>0</td>
-            <td>0</td>
+            <td />
             <td>0</td>
           </tr>
           <tr>
             <td>EUR</td>
             <td>0</td>
             <td>0</td>
-            <td>0</td>
+            <td />
           </tr>
           </tbody>
         </table>
