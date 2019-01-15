@@ -21,6 +21,8 @@ namespace example_react_app
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors();
+
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -41,6 +43,8 @@ namespace example_react_app
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
+
+            app.UseCors(builder => builder.WithOrigins("http://localhost"));
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

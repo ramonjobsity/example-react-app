@@ -1,23 +1,14 @@
 import * as React from 'react';
 import './App.css';
-import {appStore} from "./AppStore";
-import {ExchangeRates} from "./ExchangeRates";
+import store from './config/store';
 import {Provider} from "react-redux";
-import {SelectedValuesForm} from "./SelectedValuesForm";
+import Main from './views/Main';
 
 export class App extends React.Component {
   public render() {
     return (
-      <Provider store={appStore}>
-        <div className="App">
-          <header>
-            <h1>Example</h1>
-          </header>
-          <div>
-            <ExchangeRates/>
-            <SelectedValuesForm/>
-          </div>
-        </div>
+      <Provider store={store}>
+        <Main/>
       </Provider>
     );
   }
